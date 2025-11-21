@@ -1,0 +1,172 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="style.css">
+    <title>Cadastro de Matéria G1 - InterTV</title>
+</head>
+<body>
+   <header>
+        <h1>Cadastro Matéria G1 - Inter TV RJ</h1>
+        <h4>Quando você enviar este formulário, ele não coletará automaticamente seus detalhes, como nome e endereço de email, a menos que você mesmo o forneça.</h4>
+    </header>
+    
+    <main>
+        <form method="post" action="">
+            <!-- 1 PERGUNTA -->
+            <div class="escrita">
+                <input type="text" id="p1" name="codigo" class="input" placeholder=" " required>
+                <span class="barra"></span>
+                <label class="input-label" for="p1">1.Código do repórter</label>
+            </div>
+            
+            <!-- 2 PERGUNTA -->
+            <fieldset class="grupo">
+                <legend>Tipo de conteúdo:</legend>
+                <input type="radio" value="noticia" id="p2_op1" name="conteudo" class="radio" required>
+                <label for="p2_op1">Notícia</label><br>
+                <input type="radio" value="quiz" id="p2_op2" name="conteudo" class="radio" required>
+                <label for="p2_op2">Quiz</label><br>
+            </fieldset>
+
+            <!-- 3 PERGUNTA -->
+            <fieldset class="grupo">
+                <legend>User Needs:</legend>
+                <input type="radio" value="informar" id="p3_op1" name="needs" class="radio" required>
+                <label for="p3_op1">Informar</label><br>
+                <input type="radio" value="entreter" id="p3_op2" name="needs" class="radio" required>
+                <label for="p3_op2">Entreter</label><br>
+                <input type="radio" value="ensinar" id="p3_op3" name="needs" class="radio" required>
+                <label for="p3_op3">Ensinar</label><br>
+                <input type="radio" value="inspirar" id="p3_op4" name="needs" class="radio" required>
+                <label for="p3_op4">Inspirar</label><br>
+                <input type="radio" value="acompanhar" id="p3_op5" name="needs" class="radio" required>
+                <label for="p3_op5">Acompamhar assuntos em alta</label><br>
+            </fieldset>
+
+            <!-- 4 PERGUNTA -->
+            <fieldset class="grupo">
+                <legend>Deixar comentário aberto?</legend>
+                <p><em>OBS: Fechar quando há morte ou estupro</em></p>
+                <input type="radio" value="sim" id="p4_op1" name="comentario" class="radio" required>
+                <label for="p4_op1">Sim</label><br>
+                <input type="radio" value="nao" id="p4_op2" name="comentario" class="radio" required>
+                <label for="p4_op2">Não</label><br>
+            </fieldset>
+
+            <!-- 5 PERGUNTA -->
+            <fieldset class="grupo">
+                <legend>Editoria primária:</legend>
+                <input type="radio" value="lagos" id="p5_op1" name="primaria" class="radio" required>
+                <label for="p5_op1">Região dos Lagos</label><br>
+                <input type="radio" value="serrana" id="p5_op2" name="primaria" class="radio" required>
+                <label for="p5_op2">Região Serrana</label><br>
+                <input type="radio" value="fluminense" id="p5_op3" name="primaria" class="radio" required>
+                <label for="p5_op3">Norte Fluminense</label><br>
+            </fieldset>
+
+
+            <!-- 6 PERGUNTA -->
+            <fieldset class="grupo">
+                <legend>Editoria Secundária:</legend>
+                <p><em>Selecione 2 opções.</em></p>
+                <input type="checkbox" value="lagos" id="p6_op1" name="secundaria[]" class="radio">
+                <label for="p6_op1">Região dos Lagos</label><br>
+                <input type="checkbox" value="serrana" id="p6_op2" name="secundaria[]" class="radio">
+                <label for="p6_op2">Região Serrana</label><br>
+                <input type="checkbox" value="fluminense" id="p6_op3" name="secundaria[]" class="radio">
+                <label for="p6_op3">Norte Fluminense</label><br>
+            </fieldset>
+
+            <!-- 7 PERGUNTA -->
+            <fieldset class="grupo">
+                <legend>Autor(s)</legend>
+                <details>
+                    <summary>Selecione o Autor</summary>
+                    <input type="checkbox" value="ana" id="autor1" name="autor[]" class="radio">
+                    <label for="autor1">Ana Beatriz Rangel</label><br>
+                    <input type="checkbox" value="andreia" id="autor2" name="autor[]" class="radio">
+                    <label for="autor2">Andreia Freitas</label><br>
+                    <input type="checkbox" value="ariane" id="autor3" name="autor[]" class="radio">
+                    <label for="autor3">Ariane Marques</label><br>
+                    <input type="checkbox" value="barney" id="autor4" name="autor[]" class="radio">
+                    <label for="autor4">Barney Campos</label><br>
+                    <input type="checkbox" value="bianca" id="autor5" name="autor[]" class="radio">
+                    <label for="autor5">Bianca Chaboudet</label><br>
+                    <input type="checkbox" value="caio" id="autor6" name="autor[]" class="radio">
+                    <label for="autor6">Caio Álex</label><br>
+                    <input type="checkbox" value="crika" id="autor7" name="autor[]" class="radio">
+                    <label for="autor7">Crika dos Reis</label><br>
+                    <input type="checkbox" value="deborah" id="autor8" name="autor[]" class="radio">
+                    <label for="autor8">Déborah Carvalho</label><br>
+                    <input type="checkbox" value="eliandra" id="autor9" name="autor[]" class="radio">
+                    <label for="autor9">Eliandra Bussinger</label><br>
+                    <input type="checkbox" value="hyago" id="autor10" name="autor[]" class="radio">
+                    <label for="autor10">Hyago Santos</label><br>
+                    <input type="checkbox" value="joao" id="autor11" name="autor[]" class="radio">
+                    <label for="autor11">João Villa Real</label><br>
+                    <input type="checkbox" value="juan" id="autor12" name="autor[]" class="radio">
+                    <label for="autor12">Juan Lessa</label><br>
+                    <input type="checkbox" value="lilia" id="autor13" name="autor[]" class="radio">
+                    <label for="autor13">Lilia Bustilho</label><br>
+                    <input type="checkbox" value="luci" id="autor14" name="autor[]" class="radio">
+                    <label for="autor14">Luci dos Anjos</label><br>
+                    <input type="checkbox" value="matheus" id="autor15" name="autor[]" class="radio">
+                    <label for="autor15">Matheus Augustos</label><br>
+                    <input type="checkbox" value="monique" id="autor16" name="autor[]" class="radio">
+                    <label for="autor16">Monique Teixeira</label><br>
+                    <input type="checkbox" value="mylena" id="autor17" name="autor[]" class="radio">
+                    <label for="autor17">Mylena Rodrigues</label><br>
+                    <input type="checkbox" value="nathalia" id="autor18" name="autor[]" class="radio">
+                    <label for="autor18">Nathalia Rebello</label><br>
+                    <input type="checkbox" value="priscila" id="autor19" name="autor[]" class="radio">
+                    <label for="autor19">Priscila Torquato</label><br>
+                    <input type="checkbox" value="renato" id="autor20" name="autor[]" class="radio">
+                    <label for="autor20">Renato Filho</label><br>
+                    <input type="checkbox" value="rhayssa" id="autor21" name="autor[]" class="radio">
+                    <label for="autor21">Rhayssa Motta</label><br>
+                    <input type="checkbox" value="yuri" id="autor22" name="autor[]" class="radio">
+                    <label for="autor22">Yuri Ramos</label><br>
+                    <input type="checkbox" value="salutiel" id="autor23" name="autor[]" class="radio">
+                    <label for="autor23">Salutiel Filót</label><br>
+                </details>
+            </fieldset>
+
+            <!-- 8 PERGUNTA -->
+            <fieldset class="grupo">
+                <legend>Fonte Interna:</legend>
+                <input type="radio" value="g1" id="p8_op1" name="fonte" class="radio" required>
+                <label for="p8_op1">G1</label><br>
+            </fieldset>
+
+            <!-- 11 PERGUNTA -->
+            <div class="escrita">
+                <input type="text" id="p11" name="titulo" class="input" placeholder=" " required>
+                <span class="barra"></span>
+                <label class="input-label" for="p11">Título</label>
+            </div>
+
+            <!-- 12 PERGUNTA -->
+            <div class="escrita">
+                <input type="text" id="p12" name="subtitulo" class="input" placeholder=" " required>
+                <span class="barra"></span>
+                <label class="input-label" for="p12">Subtítulo</label>
+            </div>
+
+            <!-- 13ª PERGUNTA -->
+            <div class="escrita">
+                <textarea id="p13" name="materia" class="input textarea" required></textarea>
+                <span class="barra"></span>
+                <label class="input-label" for="p13">Texto da matéria</label>
+            </div>
+
+
+
+            <button type="submit">Enviar</button>
+
+
+        </form>
+    </main>
+</body>
+</html>
