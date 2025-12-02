@@ -5,12 +5,98 @@
     font-family: Verdana, Geneva, Tahoma, sans-serif;
 }
 
+/* Sistema de seleção de cidades */
+.suggestions {
+    position: absolute;
+    top: 100%;
+    left: 0;
+    right: 0;
+    background: white;
+    border: 1px solid #b00000;
+    border-top: none;
+    max-height: 150px;
+    overflow-y: auto;
+    z-index: 1000;
+    display: none;
+}
+
+.suggestion-item {
+    padding: 10px 15px;
+    cursor: pointer;
+    border-bottom: 1px solid #eee;
+    transition: background-color 0.2s;
+}
+
+.suggestion-item:hover {
+    background: #ffe6e6;
+}
+
+.suggestion-item:last-child {
+    border-bottom: none;
+}
+
+.selected-cities {
+    margin-top: 15px;
+    display: flex;
+    flex-wrap: wrap;
+    gap: 8px;
+}
+
+.city-tag {
+    background: #ffe6e6;
+    border: 1px solid #b00000;
+    border-radius: 15px;
+    padding: 6px 12px;
+    font-size: 14px;
+    display: flex;
+    align-items: center;
+    gap: 8px;
+    color: #b00000;
+}
+
+.selected-city {
+    margin-top: 15px;
+    padding: 10px 15px;
+    background: #ffe6e6;
+    border: 1px solid #b00000;
+    border-radius: 8px;
+    display: none;
+    color: #b00000;
+    font-weight: bold;
+}
+
+.remove {
+    cursor: pointer;
+    color: #b00000;
+    font-weight: bold;
+    font-size: 16px;
+    line-height: 1;
+}
+
+.remove:hover {
+    color: #ff0000;
+}
+
+.escrita {
+    position: relative;
+}
+
 body{
     min-height: 100vh;
     background-color: #f3f3f3;
     color: #222;
     padding: 20px;
     line-height: 1.5;
+}
+
+p{
+    margin-bottom: 12px;
+    color: #b00000;
+}
+
+.cidade{
+    color: #b00000;
+    margin-top: 10px;
 }
 
 header{
@@ -73,7 +159,8 @@ form{
 .escrita .input-label {
     color: #b00000;
     font-size: 18px;
-    font-weight: normal;
+    font-weight: bold;
+    margin-left: 10px;
     position: absolute;
     left: 12px;
     top: 14px;
@@ -84,7 +171,7 @@ form{
 
 .input:focus ~ .input-label,
 .input:not(:placeholder-shown) ~ .input-label {
-    top: -10px;
+    top: -12px;
     font-size: 14px;
     color: #b00000;
     background: #fff;

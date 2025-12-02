@@ -4,6 +4,7 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="style.css">
+    <script src="script.js"></script>
     <title>Cadastro de Matéria G1 - InterTV</title>
 </head>
 <body>
@@ -18,7 +19,7 @@
             <div class="escrita">
                 <input type="text" id="p1" name="codigo" class="input" placeholder=" " required>
                 <span class="barra"></span>
-                <label class="input-label" for="p1">1.Código do repórter</label>
+                <label class="input-label" for="p1">Código do repórter:</label>
             </div>
             
             <!-- 2 PERGUNTA -->
@@ -84,8 +85,8 @@
                 <legend>Autor(s)</legend>
                 <details>
                     <summary>Selecione o Autor</summary>
-                    <input type="checkbox" value="ana" id="autor1" name="autor[]" class="radio">
-                    <label for="autor1">Ana Beatriz Rangel</label><br>
+                    <input type="checkbox" value="loara" id="autor1" name="autor[]" class="radio">
+                    <label for="autor1">Loara Ramos</label><br>
                     <input type="checkbox" value="andreia" id="autor2" name="autor[]" class="radio">
                     <label for="autor2">Andreia Freitas</label><br>
                     <input type="checkbox" value="ariane" id="autor3" name="autor[]" class="radio">
@@ -96,8 +97,8 @@
                     <label for="autor5">Bianca Chaboudet</label><br>
                     <input type="checkbox" value="caio" id="autor6" name="autor[]" class="radio">
                     <label for="autor6">Caio Álex</label><br>
-                    <input type="checkbox" value="crika" id="autor7" name="autor[]" class="radio">
-                    <label for="autor7">Crika dos Reis</label><br>
+                    <input type="checkbox" value="diego" id="autor7" name="autor[]" class="radio">
+                    <label for="autor7">Diego Varsi</label><br>
                     <input type="checkbox" value="deborah" id="autor8" name="autor[]" class="radio">
                     <label for="autor8">Déborah Carvalho</label><br>
                     <input type="checkbox" value="eliandra" id="autor9" name="autor[]" class="radio">
@@ -106,18 +107,18 @@
                     <label for="autor10">Hyago Santos</label><br>
                     <input type="checkbox" value="joao" id="autor11" name="autor[]" class="radio">
                     <label for="autor11">João Villa Real</label><br>
-                    <input type="checkbox" value="juan" id="autor12" name="autor[]" class="radio">
-                    <label for="autor12">Juan Lessa</label><br>
+                    <input type="checkbox" value="ismael" id="autor12" name="autor[]" class="radio">
+                    <label for="autor12">Ismael Torquato</label><br>
                     <input type="checkbox" value="lilia" id="autor13" name="autor[]" class="radio">
                     <label for="autor13">Lilia Bustilho</label><br>
-                    <input type="checkbox" value="luci" id="autor14" name="autor[]" class="radio">
-                    <label for="autor14">Luci dos Anjos</label><br>
+                    <input type="checkbox" value="edson" id="autor14" name="autor[]" class="radio">
+                    <label for="autor14">Edson Araújo</label><br>
                     <input type="checkbox" value="matheus" id="autor15" name="autor[]" class="radio">
                     <label for="autor15">Matheus Augustos</label><br>
-                    <input type="checkbox" value="monique" id="autor16" name="autor[]" class="radio">
-                    <label for="autor16">Monique Teixeira</label><br>
-                    <input type="checkbox" value="mylena" id="autor17" name="autor[]" class="radio">
-                    <label for="autor17">Mylena Rodrigues</label><br>
+                    <input type="checkbox" value="isabela" id="autor16" name="autor[]" class="radio">
+                    <label for="autor16">Isabela Lauriano</label><br>
+                    <input type="checkbox" value="ludmila" id="autor17" name="autor[]" class="radio">
+                    <label for="autor17">Ludmila Lopes</label><br>
                     <input type="checkbox" value="nathalia" id="autor18" name="autor[]" class="radio">
                     <label for="autor18">Nathalia Rebello</label><br>
                     <input type="checkbox" value="priscila" id="autor19" name="autor[]" class="radio">
@@ -130,6 +131,12 @@
                     <label for="autor22">Yuri Ramos</label><br>
                     <input type="checkbox" value="salutiel" id="autor23" name="autor[]" class="radio">
                     <label for="autor23">Salutiel Filót</label><br>
+                    <input type="checkbox" value="samyra" id="autor24" name="autor[]" class="radio">
+                    <label for="autor24">Samyra Karyme</label><br>
+                    <input type="checkbox" value="marcos" id="autor25" name="autor[]" class="radio">
+                    <label for="autor25">Marcos Vagner</label><br>
+                    <input type="checkbox" value="anna" id="autor26" name="autor[]" class="radio">
+                    <label for="autor26">Anna Beatriz Thomaz</label><br>
                 </details>
             </fieldset>
 
@@ -140,18 +147,35 @@
                 <label for="p8_op1">G1</label><br>
             </fieldset>
 
+            <!-- 9 PERGUNTA -->
+            <div class="escrita">
+                <input type="text" id="p9" name="local" class="input" placeholder=" " required>
+                <span class="barra"></span>
+                <label class="input-label" for="p9">Local de publicação:</label>
+                <p class="cidade"><em>Digite para buscar cidades (múltipla seleção)</em></p>
+            </div>
+
+
+            <!-- 10 PERGUNTA -->
+            <div class="escrita">
+                <input type="text" id="p10" name="base" class="input" placeholder=" " required>
+                <span class="barra"></span>
+                <label class="input-label" for="p10">Base:</label>
+                <p class="cidade"><em>Apenas uma cidade para indexar</em></p>
+            </div>
+
             <!-- 11 PERGUNTA -->
             <div class="escrita">
                 <input type="text" id="p11" name="titulo" class="input" placeholder=" " required>
                 <span class="barra"></span>
-                <label class="input-label" for="p11">Título</label>
+                <label class="input-label" for="p11">Título:</label>
             </div>
 
             <!-- 12 PERGUNTA -->
             <div class="escrita">
                 <input type="text" id="p12" name="subtitulo" class="input" placeholder=" " required>
                 <span class="barra"></span>
-                <label class="input-label" for="p12">Subtítulo</label>
+                <label class="input-label" for="p12">Subtítulo:</label>
             </div>
 
             <!-- 13ª PERGUNTA -->
