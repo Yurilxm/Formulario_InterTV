@@ -144,3 +144,70 @@ document.addEventListener('click', function(e) {
         });
     }
 });
+
+
+
+// Seleciona todos os radio buttons da editoria primária
+const radiosPrimaria = document.querySelectorAll('input[name="primaria"]')
+const checkboxesSecundaria = document.querySelectorAll('input[name="secundaria[]"]')
+
+// Adiciona evento de mudança para cada radio button
+radiosPrimaria.forEach((radio) => {
+  radio.addEventListener("change", function () {
+    if (this.checked) {
+      // Valor selecionado na primária
+      const valorSelecionado = this.value
+
+      // Desmarca todos os checkboxes primeiro
+      checkboxesSecundaria.forEach((checkbox) => {
+        checkbox.checked = false
+      })
+
+      // Marca os checkboxes que NÃO são o valor selecionado
+      checkboxesSecundaria.forEach((checkbox) => {
+        if (checkbox.value !== valorSelecionado) {
+          checkbox.checked = true
+        }
+      })
+    } else {
+      checkboxesSecundaria.forEach((checkbox) => {
+        checkbox.checked = false
+      })
+    }
+  })
+})
+
+// Opcional: Impede que o usuário mude manualmente a seleção secundária
+checkboxesSecundaria.forEach((checkbox) => {
+  checkbox.addEventListener("click", (e) => {
+    // Verifica se há uma seleção na primária
+    const primariaSelecionada = document.querySelector('input[name="primaria"]:checked')
+
+    if (primariaSelecionada) {
+      // Impede a mudança manual
+      e.preventDefault()
+
+      // Reaplica a lógica
+      checkboxesSecundaria.forEach((cb) => {
+        cb.checked = cb.value !== primariaSelecionada.value
+      })
+    }
+  })
+})
+
+// Permitir desmarcar radio buttons ao clicar novamente
+document.querySelectorAll('input[type="radio"]').forEach((radio) => {
+  radio.addEventListener("click", function (e) {
+    if (this.wasChecked) {
+      this.checked = false
+
+      // Se for um radio da editoria primária, desmarca as secundárias
+      if (this.name === "primaria") {
+        checkboxesSecundaria.forEach((checkbox) => {
+          checkbox.checked = false
+        })
+      }
+    }
+    this.wasChecked = this.checked
+  })
+})

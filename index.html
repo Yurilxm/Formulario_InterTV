@@ -4,7 +4,7 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="style.css">
-    <script src="script.js"></script>
+    <script src="script.js" defer></script>
     <title>Cadastro de Matéria G1 - InterTV</title>
 </head>
 <body>
@@ -16,13 +16,6 @@
     <main>
         <form method="post" action="">
             <!-- 1 PERGUNTA -->
-            <div class="escrita">
-                <input type="text" id="p1" name="codigo" class="input" placeholder=" " required>
-                <span class="barra"></span>
-                <label class="input-label" for="p1">Código do repórter:</label>
-            </div>
-            
-            <!-- 2 PERGUNTA -->
             <fieldset class="grupo">
                 <legend>Tipo de conteúdo:</legend>
                 <input type="radio" value="noticia" id="p2_op1" name="conteudo" class="radio" required>
@@ -31,7 +24,7 @@
                 <label for="p2_op2">Quiz</label><br>
             </fieldset>
 
-            <!-- 3 PERGUNTA -->
+            <!-- 2 PERGUNTA -->
             <fieldset class="grupo">
                 <legend>User Needs:</legend>
                 <input type="radio" value="informar" id="p3_op1" name="needs" class="radio" required>
@@ -43,10 +36,10 @@
                 <input type="radio" value="inspirar" id="p3_op4" name="needs" class="radio" required>
                 <label for="p3_op4">Inspirar</label><br>
                 <input type="radio" value="acompanhar" id="p3_op5" name="needs" class="radio" required>
-                <label for="p3_op5">Acompamhar assuntos em alta</label><br>
+                <label for="p3_op5">Acompanhar assuntos em alta</label><br>
             </fieldset>
 
-            <!-- 4 PERGUNTA -->
+            <!-- 3 PERGUNTA -->
             <fieldset class="grupo">
                 <legend>Deixar comentário aberto?</legend>
                 <p><em>OBS: Fechar quando há morte ou estupro</em></p>
@@ -56,7 +49,7 @@
                 <label for="p4_op2">Não</label><br>
             </fieldset>
 
-            <!-- 5 PERGUNTA -->
+            <!-- 4 PERGUNTA -->
             <fieldset class="grupo">
                 <legend>Editoria primária:</legend>
                 <input type="radio" value="lagos" id="p5_op1" name="primaria" class="radio" required>
@@ -68,7 +61,7 @@
             </fieldset>
 
 
-            <!-- 6 PERGUNTA -->
+            <!-- 5 PERGUNTA -->
             <fieldset class="grupo">
                 <legend>Editoria Secundária:</legend>
                 <p><em>Selecione 2 opções.</em></p>
@@ -80,7 +73,7 @@
                 <label for="p6_op3">Norte Fluminense</label><br>
             </fieldset>
 
-            <!-- 7 PERGUNTA -->
+            <!-- 6 PERGUNTA -->
             <fieldset class="grupo">
                 <legend>Autor(s)</legend>
                 <details>
@@ -140,14 +133,14 @@
                 </details>
             </fieldset>
 
-            <!-- 8 PERGUNTA -->
+            <!-- 7 PERGUNTA -->
             <fieldset class="grupo">
                 <legend>Fonte Interna:</legend>
-                <input type="radio" value="g1" id="p8_op1" name="fonte" class="radio" required>
+                <input type="radio" value="g1" id="p8_op1" name="fonte" class="radio" checked disabled>
                 <label for="p8_op1">G1</label><br>
             </fieldset>
 
-            <!-- 9 PERGUNTA -->
+            <!-- 8 PERGUNTA -->
             <div class="escrita">
                 <input type="text" id="p9" name="local" class="input" placeholder=" " required>
                 <span class="barra"></span>
@@ -156,7 +149,7 @@
             </div>
 
 
-            <!-- 10 PERGUNTA -->
+            <!-- 9 PERGUNTA -->
             <div class="escrita">
                 <input type="text" id="p10" name="base" class="input" placeholder=" " required>
                 <span class="barra"></span>
@@ -164,21 +157,21 @@
                 <p class="cidade"><em>Apenas uma cidade para indexar</em></p>
             </div>
 
-            <!-- 11 PERGUNTA -->
+            <!-- 10 PERGUNTA -->
             <div class="escrita">
                 <input type="text" id="p11" name="titulo" class="input" placeholder=" " required>
                 <span class="barra"></span>
                 <label class="input-label" for="p11">Título:</label>
             </div>
 
-            <!-- 12 PERGUNTA -->
+            <!-- 11 PERGUNTA -->
             <div class="escrita">
                 <input type="text" id="p12" name="subtitulo" class="input" placeholder=" " required>
                 <span class="barra"></span>
                 <label class="input-label" for="p12">Subtítulo:</label>
             </div>
 
-            <!-- 13ª PERGUNTA -->
+            <!-- 12 PERGUNTA -->
             <div class="escrita">
                 <textarea id="p13" name="materia" class="input textarea" required></textarea>
                 <span class="barra"></span>
@@ -186,9 +179,7 @@
             </div>
 
 
-
             <button type="submit">Enviar</button>
-
 
         </form>
     </main>
